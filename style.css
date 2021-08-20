@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Serif', serif;
+}
+.navbar ul{
+    list-style: none;
+    display: flex;
+}
+.navbar li{
+    font-size: 25px;
+    padding: 3px;
+    margin: 12px;
+
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+}
+ .navbar::before{
+    content: "";
+    position: absolute;
+    background-color: rgb(131, 128, 131);
+    height: 4rem;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+.navbar{
+    width: 100%;
+    max-height:100px;
+    border-bottom: 2px solid rgb(148, 146, 146);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0px;
+ 
+    
+
+}
+.search{
+    display: flex;
+    position: absolute;
+    right: 20px;
+}
+.search input{
+    margin: 4px  6px;
+    padding: 0px;
+    border: 2px solid white;
+    border-radius: 6px;
+}
+.btn{
+    padding: 2px  6px;
+    margin: 3px;
+    border: 2px solid white;
+    background: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+#home::before{
+    content: "";
+    background: url(/photos/Bg1.jpg);
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 55%;
+    width: 100%;
+    background-size: cover;
+    z-index: -1;
+    opacity: 1.8;
+
+
+}
+#home{
+    height: 50vh;
+}
+#home h1{
+    text-align: center;
+    color: azure;
+    font-size: 3.2rem;
+    margin: 25px;
+    font-family: 'Ubuntu', sans-serif;
+}
+#home p{
+    padding: 32px;
+    margin: 15px;
+    color: azure;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 2px  rgb(20, 20, 20);
+}
+#heading{ 
+    text-align: center;
+    margin: 20px;
+    padding: 30px;
+    font-size: 3rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.navbar a:hover{
+    background-color: rgb(255, 254, 254);
+    color: grey;
+}
+.btn:hover{
+    background-color: rgb(229, 245, 199);
+    color: grey;
+}
+.ham{
+    width: 3rem;
+    height: 3rem;
+    display: none;
+}
+.ham h4{
+    width: 3rem;
+    height: 0px;
+    background-color: white;
+    margin: 5px;
+    padding: 3px;
+}
+  /* this is the container */
+.container{
+   background-color: aliceblue;
+}
+.vendor{
+  /* border: 2px solid red; */
+  margin: 20px 0;
+}
+.profile{
+    max-height: 20%;
+    max-width: 20%;
+    border-radius: 50%;
+    margin: 10px 38px;
+    padding: 3px;
+  
+}
+.personal{
+    display: flex;
+}
+.rightprofile{
+    display: flex;
+    flex-flow: column wrap;
+}
+.name{
+    font-size: 3rem;
+    color: rgb(61, 62, 63);
+    margin: 30px 92px;
+}
+.address{
+    font-size: 1.8em;
+    padding: 25px;
+    margin: 0px 20px;
+}
+.food1{
+    width: 95%;
+    height: 90%;
+    grid-area: food_1;
+    border: 2px solid grey;
+    border-radius: 15px;
+    margin: 20px;
+    outline: none;
+}
+.food2{
+    width: 95%;
+    height: 90%;
+    grid-area: food_2;
+    border: 2px solid grey;
+    border-radius: 15px;
+    margin: 20px;
+    outline: none;
+}
+.fooditem{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid: "food_1 food_2";
+}
+footer{ 
+    display: flex;
+    background-color: rgb(31, 30, 30);
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    height: 2rem;
+    margin-top: 0;
+}
+@media only screen and (max-width:1220px) {
+    .container{
+        background-color: blue;
+    }
+    .navbar ul{
+        margin-right: auto;
+    }
+    #home h1{
+        font-size: 2rem;
+        margin: 0;
+    }
+    #home p{
+        font-size: 1rem;
+    }
+    .food1{
+          margin: 0;
+    }
+    .food2{
+        margin: 0;
+    }   
+}
+@media  only screen and (max-width:880px) {
+    .container{
+        background-color: chartreuse;
+    }
+    .navbar ul{
+        display: none;
+    }
+    .navbar{
+        display: block;
+        height: 18%;
+        width: 100%;
+    }
+    .ham{
+        display:inline-block;
+        position: absolute;
+        right: 10px;
+    }
+    #home h1{
+        font-size: 2.2rem;
+    }
+    #home::before {
+        width: 60rem;
+    }
+    .navbar::before{
+        width: 60rem;
+    }
+}
