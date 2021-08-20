@@ -61,7 +61,7 @@
 }
 #home::before{
     content: "";
-    background: url(/photos/Bg1.jpg);
+    background: url(favvendors/photos/Bg1.jpg);
     /* background-position: center; */
     background-repeat: no-repeat;
     position: absolute;
