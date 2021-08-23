@@ -61,7 +61,7 @@
 }
 #home::before{
     content: "";
-    background: url(favvendors/photos/Bg1.jpg);
+    background: url(/photos/Bg1.jpg);
     /* background-position: center; */
     background-repeat: no-repeat;
     position: absolute;
@@ -90,7 +90,7 @@
     font-size: 1.5rem;
     text-shadow: 2px 2px 2px  rgb(20, 20, 20);
 }
-#heading{ 
+.heading{ 
     text-align: center;
     margin: 20px;
     padding: 30px;
@@ -188,7 +188,7 @@ footer{
 }
 @media only screen and (max-width:1220px) {
     .container{
-        background-color: blue;
+        /* background-color: blue; */
     }
     .navbar ul{
         margin-right: auto;
@@ -207,7 +207,12 @@ footer{
         margin: 0;
     }   
 }
-@media  only screen and (max-width:880px) {
+@media only screen and (max-width:880px) {
+     .container{
+         background-color: red;
+     }
+}
+@media  only screen and (max-width:400px) {
     .container{
         background-color: chartreuse;
     }
@@ -216,21 +221,25 @@ footer{
     }
     .navbar{
         display: block;
-        height: 18%;
+        /* height: 18%; */
         width: 100%;
+        position: fixed;
     }
     .ham{
         display:inline-block;
-        position: absolute;
-        right: 10px;
+        position: fixed;
+        right: 20px;
+        top: 15px;
     }
     #home h1{
         font-size: 2.2rem;
     }
     #home::before {
         width: 60rem;
+        height: 60rem;
     }
     .navbar::before{
         width: 60rem;
+        height: 6rem;
     }
 }
