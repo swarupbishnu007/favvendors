@@ -18,155 +18,88 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap" rel="stylesheet">
-  <style>
-    * {
+ <style>
+   * {
       margin: 0;
       padding: 0;
       font-family: 'Noto Serif', serif;
     }
 
-    .navbar ul {
-      list-style: none;
-      display: flex;
-    }
-
-    .navbar li {
-      font-size: 25px;
-      padding: 3px;
-      margin: 12px;
-
-    }
-
-    .navbar a {
-      text-decoration: none;
-      color: white;
-    }
-
-    .navbar::before {
-      content: "";
-      position: absolute;
-      background-color: rgb(131, 128, 131);
-      height: 0px;
-      width: 100%;
-      z-index: -1;
-      opacity: 0.3;
-    }
-
-    .navbar {
-      width: 100%;
-      /* max-height: 100px; */
-      border-bottom: 2px solid rgb(148, 146, 146);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: sticky;
-      top: 0px;
-      padding: 0px;
-      margin: 0;
-
-
-
-    }
-
-    .search {
-      display: flex;
-      position: absolute;
-      right: 20px;
-    }
-
-    .search input {
-      margin: 4px 6px;
-      padding: 0px;
-      border: 2px solid white;
-      border-radius: 6px;
-    }
-
-    .btn {
-      padding: 2px 6px;
-      margin: 3px;
-      border: 2px solid white;
-      background: none;
-      border-radius: 5px;
-      cursor: pointer;
-      color: white;
-    }
-
     #home::before {
-      content: "";
-      background: url(Bg1.jpg);
-      /* background-position: center; */
-      background-repeat: no-repeat;
-      position: absolute;
-      height: 55%;
-      width: 100%;
-      background-size: cover;
-      z-index: -1;
-      opacity: 1.8;
-
-
+      height: 14%;
     }
 
-    #home {
-      height: 50vh;
+    .heading {
+      text-align: center;
+      /* margin-top: 7rem; */
+      font-size: 35px;
+      font-family: 'Ubuntu', sans-serif;
+      color: rgb(14, 13, 13);
+      margin: 0px;
+    }
+    .navbar::before{
+      height: 0;
+    }
+    
+
+    @media screen and (max-width:495px) {
+      .heading {
+        color: white;
+        width: 155vw;
+      }
+
+      footer {
+        width: 155%;
+        height: 10%;
+      }
+
+      body {
+        background-color: white;
+      }
+
+      .addform {
+        width: 155vw;
+        font-size: 20px;
+      }
+
+      .btn {
+        padding: 11px;
+      }
+      .navbar::before{
+      height: 0;
+      width: 0;
     }
 
-    .navbar a:hover {
-      background-color: rgb(255, 254, 254);
-      color: grey;
     }
-
-    .btn:hover {
-      background-color: rgb(229, 245, 199);
-      color: grey;
-    }
-
-    .ham {
-      width: 3rem;
-      height: 3rem;
-      display: none;
-    }
-
-    .ham h4 {
-      width: 3rem;
-      height: 0px;
-      background-color: white;
-      margin: 5px;
-      padding: 3px;
-    }
-
-    /* footer {
-      position:absolute;
-       bottom: 0px;
-      width: 100vw;
-    } */
-  </style>
+ </style>
 </head>
 
 <body>
   <section id="home">
-    <nav class="navbar">
-      <ul>
-        <li> <a href="index.html"> Home</a></li>
+    <nav class="navbar" id="navbar">
+      <ul id="navul">
+        <li> <a href="index.html"target="blank"> Home</a></li>
         <li><a href="index.html"> Expolre</a></li>
-        <li><a href="add.html"> Add your Favorite</a></li>
-        <li><a href="contact.html"> Contact Us</a></li>
+        <li><a href="add.html"target="blank"> Add your Favorite</a></li>
+        <li><a href="contact.html"target="blank"> Contact Us</a></li>
       </ul>
       <div class="search">
         <input type="text" placeholder="Search here...">
         <button class="btn">Search</button>
       </div>
-      <div class="ham">
+      <div class="ham" id="ham">
         <h4></h4>
         <h4></h4>
         <h4></h4>
       </div>
     </nav>
-  </section>
+  </section >
+  <section class="contsec">
   <h1 class="heading">Contact Us</h1>
-  <form class="mb-5 p-5">
+  <form class="mb-5 p-4 addform mt-2">
     <div class="form-group">
       <label for="Inputfirstname" class="my-1">First Name</label>
-      <input type="text" class="form-control" id="Inputfirstname" placeholder="Enter Your First Name">
+      <input type="text" class="form-control  p-md-10" id="Inputfirstname" placeholder="Enter Your First Name">
     </div>
     <div class="form-group">
       <label for="Inputlastname" class="my-1">Last Name</label>
@@ -204,12 +137,14 @@
     <button type="submit" class="btn btn-primary bg-danger my-5">Submit</button>
   </div>
   </form>
+</section>
   <footer>Copyright &copy 2022 &nbsp; &nbsp; All Right Reserve To &nbsp; &nbsp; &nbsp; www.hrbrainhub.com</footer>
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
     crossorigin="anonymous"></script>
+    <script src="index.js"></script>
    
 
 </body>

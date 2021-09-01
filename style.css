@@ -97,7 +97,6 @@
     font-size: 3rem;
     font-family: 'Ubuntu', sans-serif;
 }
-
 .navbar a:hover{
     background-color: rgb(255, 254, 254);
     color: grey;
@@ -186,41 +185,152 @@ footer{
     height: 2rem;
     margin-top: 0;
 }
+@media only screen and (min-width:1220px){
+    .heading{
+        font-size: 5rem;
+        margin-top: 4rem;
+    }
+    .navbar a:hover{
+        background-color: rgb(255, 254, 254);
+        color: grey;
+    }
+    .btn:hover{
+        background-color: rgb(229, 245, 199);
+        color: grey;
+    }
+}
 @media only screen and (max-width:1220px) {
     .container{
         /* background-color: blue; */
     }
-    .navbar ul{
+    /* .navbar ul{
         margin-right: auto;
-    }
+    } */
     #home h1{
         font-size: 2rem;
         margin: 0;
     }
     #home p{
-        font-size: 1rem;
+        font-size: 2rem;
     }
     .food1{
           margin: 0;
     }
     .food2{
         margin: 0;
-    }   
+    } 
+    .heading{
+        margin-top: 0;
+    }  
+    .navbar a:hover{
+        background-color: rgb(255, 254, 254);
+        color: grey;
+    }
+    .btn:hover{
+        background-color: rgb(229, 245, 199);
+        color: grey;
+    }
 }
 @media only screen and (max-width:880px) {
-     .container{
+    /* .container{
          background-color: red;
-     }
+     } */
+    .vendor, .personal, .fooditem{
+        display: flex;
+        flex-flow: column wrap-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+    #home::before {
+        width: 100%;
+        height: 100%;
+    }
+    /* .mainheading{
+        display: flex;
+        border: 2px solid yellow;
+        justify-content: center;
+        align-items: center;
+    } */
+    .upperarea{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .rightprofile{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .heading{
+        text-align: center;
+        /* margin-top: 7rem; */
+        font-size: 35px;
+        font-family: 'Ubuntu', sans-serif;
+        color: white;
+        margin: 0px;
+    }
+    .food1,.food2{
+        margin: 3px;
+    }
+    .profile{
+        max-width: 50%;
+    }
+    .vendor{
+        margin: 50px 0;
+    }
+    .navbar{
+        max-height: 100%;
+        display: flex;
+        flex-direction: column;
+        position: initial;
+    }
+    .navbar::before{
+        height: 0rem;
+    }
+    .navbar li{
+        padding: 0;
+        margin: 8px;
+        font-size: 18px;
+    }
+    .search{
+        position: initial;
+
+    }
+    .btn{
+        padding: 0;
+    }
+    #home p{
+        font-size: 18px;
+    }
+    #home{
+        height: 100%;
+    }
+    .navbar a:hover{
+        background-color: rgb(255, 254, 254);
+        color: grey;
+    }
+    .btn:hover{
+        background-color: rgb(229, 245, 199);
+        color: grey;
+    }
+
 }
-@media  only screen and (max-width:400px) {
+@media  only screen and (max-width:495px) {
     .container{
-        background-color: chartreuse;
+        /* background-color: chartreuse; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        margin: 0px 3rem;
     }
     .navbar ul{
         display: none;
     }
     .navbar{
-        display: block;
+        /* display: none; */
         /* height: 18%; */
         width: 100%;
         position: fixed;
@@ -229,17 +339,126 @@ footer{
         display:inline-block;
         position: fixed;
         right: 20px;
-        top: 15px;
+        top: 8px;
     }
     #home h1{
-        font-size: 2.2rem;
+        font-size: 2rem;
+        margin-top: 3rem;
+        margin-left: 2rem;
     }
     #home::before {
-        width: 60rem;
-        height: 60rem;
+        width: 155%;
+        height: 105%;
+    }
+    #home{
+        width: 130%;
+    }
+    #home p{
+        font-size: 20px;
+        padding: 10px;
+        margin: 8px;
+        margin-left: 2rem;
+    }
+    #welcome{
+        text-align: center;
     }
     .navbar::before{
         width: 60rem;
         height: 6rem;
     }
+    .navbar a:hover{
+        background-color: rgb(255, 254, 254);
+        color: grey;
+    }
+    .btn:hover{
+        background-color: rgb(229, 245, 199);
+        color: grey;
+    }
+    .vendor, .personal, .fooditem{
+        display: flex;
+        flex-flow: column wrap-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+    .vendor{
+        margin: 0px;
+    }
+    .personal{
+        padding: 8px;
+        margin: 4px;
+    }
+    .address{
+        margin-left: 40px;
+    }
+    .search{
+        display: none;
+    }
+    .upperarea{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .rightprofile{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .food1,.food2{
+        width: 65%;
+    }
+    .upperarea{
+        width: 100vw;
+    }
+    .mainheading{
+        margin: 0px;
+        font-size: 30px;
+    }
+    #explore{
+        font-size: 40px;
+        color: rgb(17, 17, 17);
+        padding: 0px;
+    }
+    body{
+        background-color: aliceblue;
+    }
+    .name{
+        margin: 15px 0;
+        font-size: 2rem;
+    }
+    footer{
+        position: absolute;
+        width: 155%;
+    }
+
+}
+@media screen and (min-width:292px)and (max-width:495px){
+    .container{
+        /* background-color: red; */
+        margin: 11rem 3rem;
+    }
+    #explore{
+        color: white;
+        font-size: 40px;
+        padding: 0px;
+    }
+   .name{
+       font-size: 2rem;
+       margin: 10px 15px;
+   }
+   .vendor{
+       margin-top: 15px;
+   }
+   .food1,.food2{
+       width: 92%;
+       margin-left: 5rem;
+   }
+   #home::before{
+       height: 98%;
+   }
+   #navul li a:hover{
+       color: blue;
+       background-color: white;
+   }
 }
